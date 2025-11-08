@@ -16,21 +16,21 @@ const { adminModel } = require("../db");
     }) 
 
     
-    adminRouter.post("/", (req, res) => {
+    adminRouter.post("/course", (req, res) => {
         res.json({
             message: "createCourse endpoint"
         })
     }) 
 
     
-    adminRouter.put("/", (req, res) => {
+    adminRouter.put("/course", (req, res) => {
         res.json({
             message: "deleteCourse endpoint"
         })
     }) 
 
     
-    adminRouter.get("/bulk", (req, res) => {
+    adminRouter.get("/course/bulk", (req, res) => {
         res.json({
             message: "addCourse endpoint"
         })

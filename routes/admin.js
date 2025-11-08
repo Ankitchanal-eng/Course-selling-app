@@ -85,9 +85,16 @@ const { JWT_ADMIN_PASSWORD } = require("../config");
     }) 
 
     
-    adminRouter.get("/course/bulk", (req, res) {
+    adminRouter.get("/course/bulk", adminMiddleware,async function (req, res) {
+        const adminId = req.userId;
+
+        const courses = await courseModel.find({
+            creatorId: adminId
+        });
+
         res.json({
-            message: "addCourse endpoint"
+            message: "Course updated",
+            courses
         })
     }) 
 

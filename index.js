@@ -12,7 +12,7 @@ app.use("/api/v1/course", courseRouter);
 app.use("/api/v1/admin", adminRouter);
 
 async function main() {
-    await mongoose.connect("mongodb+srv://luckychanal32:KBNUopnzGVvnoSRq@cluster0.jnyika4.mongodb.net/courSell");
+    await mongoose.connect("mongodb+srv://luckychanal32:KBNUopnzGVvnoSRq@cluster0.jnyika4.mongodb.net/CourSell");
     console.log("connected to mongodb")
     
     app.listen(3000, () => {
